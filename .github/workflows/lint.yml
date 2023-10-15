@@ -10,7 +10,7 @@ jobs:
     outputs:
       output1: ${{ steps.filter.outputs.python}}
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - uses: dorny/paths-filter@v2
       id: filter
       with:
@@ -37,7 +37,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - run: echo "/root/.local/bin" >> $GITHUB_PATH
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Install poetry
         run: pipx install poetry
       - uses: actions/setup-python@v4
@@ -60,7 +60,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - run: echo "/root/.local/bin" >> $GITHUB_PATH
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Install poetry
         run: pipx install poetry
       - uses: actions/setup-python@v4
