@@ -1,0 +1,5 @@
+<Project>
+  <PropertyGroup>
+    <PackageReference Include="Microsoft.Build.CentralPackageVersions" Version="2.1.3" />
+  </PropertyGroup>
+</Project>
