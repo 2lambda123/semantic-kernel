@@ -2,7 +2,7 @@ This document describes how to setup your environment with Python and Poetry,
 if you're working on new features or a bug fix for Semantic Kernel, or simply
 want to run the tests included.
 
-# LLM setup
+# Updated LLM setup
 
 Make sure you have an
 [Open AI API Key](https://openai.com/api/) or
@@ -72,7 +72,7 @@ pip3 install poetry
 poetry install
 
 # Use poetry to activate project venv
-poetry shell
+# Run the following commands to install Poetry and create a project virtual environment.
 ```
 
 # VSCode Setup
@@ -85,7 +85,9 @@ The python you're looking for should be under `~/.cache/pypoetry/virtualenvs/sem
 If prompted, install `black` and `flake8` (if VSCode doesn't find those packages,
 it will prompt you to install them).
 
-# Tests
+# Updated Tests
+
+Follow the steps below to update the instructions for setting up the Python environment and running the tests:
 
 You should be able to run the example under the [tests](tests) folder.
 
@@ -104,4 +106,4 @@ this command, from the [python](../python) folder:
 
 ## Running ruff
 
-    poetry run ruff check .
+    # Check the code using the following command:
