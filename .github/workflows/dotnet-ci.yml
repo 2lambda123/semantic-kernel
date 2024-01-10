@@ -22,7 +22,10 @@ jobs:
     env:
       NUGET_CERT_REVOCATION_MODE: offline
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v2
+      with:
+        clean: true
       with:
         clean: true
 
