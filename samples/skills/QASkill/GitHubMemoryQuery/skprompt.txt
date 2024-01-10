@@ -1,4 +1,6 @@
 {{textmemoryskill.recall $input}}
+• What steps can be taken to fix the failing GitHub Actions run?
+• What changes need to be made to the GitHub Actions workflow to address the issue?
 ---
 Considering only the information above, which has been loaded from a GitHub repository, answer the following.
 Question: {{$input}}
