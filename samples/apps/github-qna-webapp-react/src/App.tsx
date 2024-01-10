@@ -2,6 +2,15 @@
 
 import { Subtitle1, Tab, TabList } from '@fluentui/react-components';
 import { FC, useEffect, useState } from 'react';
+import { Subtitle1, Tab, TabList } from '@fluentui/react-components';
+import { FC, useEffect, useState } from 'react';
+import FunctionProbe from './components/FunctionProbe';
+import GitHubProjectSelection from './components/GitHubRepoSelection';
+import QnA from './components/QnA';
+import QuickTips, { ITipGroup } from './components/QuickTips';
+import ServiceConfig from './components/ServiceConfig';
+import { ModelType } from './components/setup/ModelConfig';
+import { IKeyConfig } from './model/KeyConfig';
 import FunctionProbe from './components/FunctionProbe';
 import GitHubProjectSelection from './components/GitHubRepoSelection';
 import QnA from './components/QnA';
@@ -206,7 +215,7 @@ const App: FC = () => {
 
                         {appState === AppState.QnA && project !== undefined && branch !== undefined ? (
                             <QnA
-                                uri={process.env.REACT_APP_FUNCTION_URI as string}
+                                uri={process.env.REACT_APP_FUNCTION_URI || '' as string}
                                 keyConfig={keyConfig!}
                                 project={project}
                                 branch={branch}
