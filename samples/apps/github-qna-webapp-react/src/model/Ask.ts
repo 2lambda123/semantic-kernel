@@ -2,7 +2,7 @@
 
 export interface IAsk {
     value: string;
-    inputs?: IAskInput[];
+    inputs?: IAskInput[]
 }
 
 export interface IAskInput {
