@@ -41,7 +41,7 @@ Create Skills and SK functions: Check out the [documentation](https://aka.ms/sk/
 for how to create Skills.
 
 Join the community: Join our [Discord community](https://aka.ms/SKDiscord) to
-share ideas and get help​.
+share ideas and get help.
 
 Contribute: We need your help to make this the best it can be. Learn how you
 can [contribute](https://github.com/microsoft/semantic-kernel/blob/main/CONTRIBUTING.md)
