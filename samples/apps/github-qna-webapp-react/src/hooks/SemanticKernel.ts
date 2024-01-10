@@ -2,6 +2,7 @@
 
 import { IAsk } from '../model/Ask';
 import { IAskResult } from '../model/AskResult';
+import { IAskResult } from '../model/AskResult';
 import {
     IKeyConfig, SK_HTTP_HEADER_COMPLETION_BACKEND, SK_HTTP_HEADER_COMPLETION_ENDPOINT, SK_HTTP_HEADER_COMPLETION_KEY, SK_HTTP_HEADER_COMPLETION_MODEL, SK_HTTP_HEADER_EMBEDDING_BACKEND, SK_HTTP_HEADER_EMBEDDING_ENDPOINT, SK_HTTP_HEADER_EMBEDDING_KEY, SK_HTTP_HEADER_EMBEDDING_MODEL, SK_HTTP_HEADER_MSGRAPH
 } from '../model/KeyConfig';
@@ -21,22 +22,22 @@ export class SemanticKernel {
         keyConfig: IKeyConfig,
         ask: IAsk,
         skillName: string,
-        functionName: string,
+        functionName: 'getSkillFunction',
     ): Promise<IAskResult> => {
         const result = await this.getResponseAsync<IAskResult>({
             commandPath: `/api/skills/${skillName}/invoke/${functionName}`,
             method: 'POST',
-            body: ask,
+            body: ask as unknown as Record<string, unknown>,
             keyConfig: keyConfig,
         });
         return result;
     };
 
-    public executePlanAsync = async (keyConfig: IKeyConfig, ask: IAsk, maxSteps: number = 10): Promise<IAskResult> => {
+    public executePlanAsync = async (keyConfig: IKeyConfig, ask: IAsk, maxSteps: number = 5): Promise<IAskResult> => {
         const result = await this.getResponseAsync<IAskResult>({
             commandPath: `/api/planner/execute/${maxSteps}`,
             method: 'POST',
-            body: ask,
+            body: ask as unknown as Record<string, unknown>,
             keyConfig: keyConfig,
         });
         return result;
@@ -62,7 +63,7 @@ export class SemanticKernel {
         }
 
         if (keyConfig.graphToken !== undefined) {
-            headers.append(SK_HTTP_HEADER_MSGRAPH, keyConfig.graphToken);
+            headers.append('SK_HTTP_HEADER_MSGRAPH', keyConfig.graphToken);
         }
 
         try {
