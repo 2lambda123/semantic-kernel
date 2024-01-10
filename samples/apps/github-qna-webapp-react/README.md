@@ -6,6 +6,7 @@
 > any architectural / security design practices to be used.
 
 ## Running the sample
+For this sample,
 
 1. You will need an [Open AI Key](https://openai.com/api/) or
    [Azure Open AI Service key](https://learn.microsoft.com/azure/cognitive-services/openai/quickstart)
