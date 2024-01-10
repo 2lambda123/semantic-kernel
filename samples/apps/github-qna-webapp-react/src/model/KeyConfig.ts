@@ -20,7 +20,7 @@ export interface IBackendConfig {
     key: string;
 }
 
-export interface IKeyConfig {
+export interface KeyConfig {
     graphToken?: string;
 
     embeddingConfig?: IBackendConfig;
