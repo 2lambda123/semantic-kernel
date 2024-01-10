@@ -1,6 +1,5 @@
-This document describes how to setup your environment with Python and Poetry,
-if you're working on new features or a bug fix for Semantic Kernel, or simply
-want to run the tests included.
+This document describes how to set up your environment with Python and Poetry, including the necessary API keys,
+if you're working on new features, a bug fix, or test runs for Semantic Kernel,
 
 # LLM setup
 
@@ -8,11 +7,11 @@ Make sure you have an
 [Open AI API Key](https://openai.com/api/) or
 [Azure Open AI service key](https://learn.microsoft.com/azure/cognitive-services/openai/quickstart?pivots=rest-api)
 
-Copy those keys into a `.env` file (see the `.env.example` file):
+Copy those keys into a `.env` file (see the example below):
 
 ```
 OPENAI_API_KEY=""
-OPENAI_ORG_ID=""
+AZURE_OPENAI_DEPLOYMENT_NAME=""
 AZURE_OPENAI_DEPLOYMENT_NAME=""
 AZURE_OPENAI_ENDPOINT=""
 AZURE_OPENAI_API_KEY=""
