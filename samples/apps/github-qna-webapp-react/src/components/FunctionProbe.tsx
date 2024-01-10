@@ -2,6 +2,8 @@
 
 import React, { FC, useEffect } from 'react';
 import { Body1, Title3, Spinner } from '@fluentui/react-components';
+import { IKeyConfig } from './model/KeyConfig';
+import { Body1, Title3, Spinner } from '@fluentui/react-components';
 
 interface IData {
     uri: string;
