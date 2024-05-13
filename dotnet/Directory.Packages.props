@@ -40,7 +40,7 @@
     <PackageVersion Include="Newtonsoft.Json" Version="[11.0.1, )" />
 
     <!-- Symbols -->
-    <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="1.1.1" />
+    <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="8.0.0" />
 
 
     <!-- Analyzers -->
